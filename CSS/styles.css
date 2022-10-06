@@ -2,13 +2,16 @@
     --accent-color: #2196F3;
     --main-color: #212121;
     --secondary-color:#757575; 
-    --body-color: #F5F5F5;
     --button-color:#F5F4FA;
+    --button-active-color: #188CE8; 
+    --white-color: #FFFFFF;
+    --solutions-bg-color: #2F303A;
+    --black-color: #000000; 
 }
 
 body{
-    color: var(--body-color);
-    background-color: var(--body-color);
+    color: var(--white-color);
+    background-color: var(--white-color);
 
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
@@ -17,7 +20,7 @@ body{
 /* Логотип */
 
 .logo{
-    color: black;
+    color: var(--black-color);
     text-decoration: none;
     font-family: 'Raleway';
     font-weight: 700;
@@ -31,7 +34,7 @@ body{
 
 .navigation-list, .link, .contacts{
     list-style: none;
-    color: #212121;
+    color: var(--main-color);
     text-decoration: none;
 
     font-weight: 500;
@@ -51,12 +54,12 @@ body{
 /* Заказать услугу */
 
 .solutions{
-    background-color: #2F303A;
+    background-color: var(--solutions-bg-color);
     text-align: center;
 }
 
 .solutions h1{
-    color: white;
+    color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -66,7 +69,7 @@ body{
 
 .primary-button{
     background-color: var(--accent-color);
-    color: white;
+    color: var(--white-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.8;
@@ -75,31 +78,35 @@ body{
     cursor: pointer;
 }
 
-
-/* Особенности */
-.properties h3{
-    color: var(--main-color); 
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        text-transform: uppercase;
+.primary-button:hover,
+.primary-button:focus{
+    background-color: var(--button-active-color);
 }
 
-.properties p {
+
+/* Особенности */
+.properties-title{
+    color: var(--main-color); 
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.properties-description{
     color: var(--secondary-color);
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 
 /* Чим ми займаємося */
 
-.services h2{
+.services-title{
     color: var(--main-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.16;
     text-align: center;
 }
 
@@ -113,15 +120,15 @@ body{
     background-color: var(--button-color);
 }
 
-.team h2{
+.team-title{
     color: var(--main-color);
     font-weight: 700;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
 }
 
-.team-list h3{
+.team-member-name{
     color: var(--main-color);
     list-style: none;
     font-weight: 500;
@@ -129,18 +136,20 @@ body{
     line-height: 1.18;
 }
 
-.team-list p{
+.job-title{
     color: var(--secondary-color);
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
 }
 
+.team-card-description{
+    background-color: var(--white-color);
+}
 
 
 /* Футер */
 .page-footer{
-    background-color: #2F303A;
+    background-color: var(--solutions-bg-color);
 }
 
 .footer-list{
@@ -149,19 +158,18 @@ body{
 
 .footer-list a{
     font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
 }
 
 .adress{
-    color: white;
+    color: var(--white-color);
 }
 
 .footer-logo{
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -174,17 +182,17 @@ body{
     color: var(--main-color);
 }
 
-.projects-list li{
+
+.project-title{
     color: var(--main-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
 }
 
-.projects-list p{
+.projects-description{
     color: var(--secondary-color);
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.8;
     letter-spacing: 0.03em;
@@ -197,13 +205,12 @@ body{
 /* Кнопки */
 
 .blue-button{
-    color: #FFFFFF;
-    background-color: #2196F3;
+    color: var(--white-color);
+    background-color: var(--accent-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.03em;
+    font-family: inherit;
 
     cursor: pointer;
 }
@@ -214,12 +221,16 @@ body{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.03em;
+    font-family: inherit;
 
     cursor: pointer;
 }
 
+.grey-button:hover,
+.grey-button:focus{
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
 
 /* Для всех слов голубого цвета */
 .accent {
